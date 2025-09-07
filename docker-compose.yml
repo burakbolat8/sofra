@@ -1,0 +1,26 @@
+
+
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONPATH=/app
+    volumes:
+      - ./backend:/app
+    networks:
+      - sofra-network
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    networks:
+      - sofra-network
+
+networks:
+  sofra-network:
+    driver: bridge
