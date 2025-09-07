@@ -4,7 +4,7 @@ import { useDinner } from './hooks/useDinner';
 import { DinnerDisplay } from './components/DinnerDisplay';
 import { CategorySelector } from './components/CategorySelector';
 import { SlotMachine } from './components/SlotMachine';
-import { UtensilsCrossed, RefreshCw, Sparkles, Menu, X } from 'lucide-react';
+import { UtensilsCrossed, RefreshCw, Sparkles, Menu } from 'lucide-react';
 import { Category } from './types/dinner';
 
 function App() {

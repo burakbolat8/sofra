@@ -104,7 +104,6 @@ export function SlotMachine({ selectedCategories, onComplete }: SlotMachineProps
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {selectedCategories.map((category, index) => {
-          const categoryInfo = categoryData[category];
           const result = results[index];
           
           return (
