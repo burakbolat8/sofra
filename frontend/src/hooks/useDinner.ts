@@ -18,7 +18,8 @@ export const useDinner = (): UseDinnerReturn => {
     setError(null);
     
     try {
-      let url = '/api/dinner/random';
+      const apiBase = ((import.meta as any).env?.VITE_API_BASE_URL ?? '').replace(/\/$/, '');
+      let url = `${apiBase}/api/dinner/random`;
       if (categories && categories.length > 0) {
         const categoryParams = categories.map(cat => cat).join(',');
         url += `?categories=${categoryParams}`;
